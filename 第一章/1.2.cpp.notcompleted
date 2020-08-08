@@ -1,0 +1,43 @@
+#include "stdc++.h"
+#include <vector>
+#include <random>
+#include <chrono>
+
+using namespace std;
+using namespace chrono;
+
+void randomvector(vector<char>& data, int N, int min, int max)
+{
+	random_device rd;
+	while (N--) {
+		data.push_back((rd() % (max - min) + min)+'a');
+	}
+}
+
+void wordpath(vector<pair<int, int>>& path, vector<vector<char>> board, char* word)
+{
+	// 从board中找到word的路径并存放到path中，
+	// 如果path中没有数据，说明board中没有该单词
+}
+
+
+int main()
+{
+	random_device rd;
+	vector<vector<char>> charboard;
+
+	// 随机生成字符二维数组,大小为M×N
+	int M = 10;
+	int N = 10;
+	charboard.resize(M);
+	for (int i = 0;i < M;i++) {
+		randomvector(charboard.at(i), N, 0, 26);
+	}
+
+	char s[] = "this";
+
+
+
+	return 0;
+}
+
